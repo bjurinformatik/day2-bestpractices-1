@@ -16,7 +16,7 @@ class GameRunner:
     def answer(self):
         total = 0
         for die in self.dice:
-            total = die.value
+            total += die.value
         return total
 
     @classmethod
@@ -26,7 +26,6 @@ class GameRunner:
         c = 0
         runner = cls()
         while True:
-
             print("Round {}\n".format(runner.round))
 
             for die in runner.dice:
@@ -41,7 +40,7 @@ class GameRunner:
                 c += 1
             else:
                 print("Sorry that's wrong")
-                print("The answer is: {}".format(runner.answer()))
+                #print("The answer is: {}".format(runner.answer()))
                 print("Like seriously, how could you mess that up")
                 runner.loses += 1
                 c = 0
