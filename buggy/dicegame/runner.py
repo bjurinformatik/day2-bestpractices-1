@@ -1,5 +1,6 @@
 from .die import Die
 from .utils import i_just_throw_an_exception
+import sys
 
 class GameRunner:
 
@@ -57,4 +58,4 @@ class GameRunner:
             if prompt == 'y' or prompt == 'Y':
                 continue
             else:
-                i_just_throw_an_exception()
+                sys.exit(0)
