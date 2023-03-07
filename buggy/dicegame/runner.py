@@ -15,7 +15,7 @@ class GameRunner:
     def answer(self):
         total = 0
         for die in self.dice:
-            total += 1
+            total = die.value
         return total
 
     @classmethod
@@ -23,8 +23,8 @@ class GameRunner:
         # Probably counts wins or something.
         # Great variable name, 10/10.
         c = 0
+        runner = cls()
         while True:
-            runner = cls()
 
             print("Round {}\n".format(runner.round))
 
@@ -54,7 +54,7 @@ class GameRunner:
 
             prompt = input("Would you like to play again?[Y/n]: ")
 
-            if prompt == 'y' or prompt == '':
+            if prompt == 'y' or prompt == 'Y':
                 continue
             else:
                 i_just_throw_an_exception()
